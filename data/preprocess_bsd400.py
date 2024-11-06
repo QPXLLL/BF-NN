@@ -33,7 +33,7 @@ def main(args):
                         train_size += 1
 
     print("Processing validation data")
-    files = sorted(glob.glob(os.path.join(args.data_path, "Set12", "*.png")))
+    files = sorted(glob.glob(os.path.join(args.data_path, "Test","Set12", "*.png")))
     with h5py.File(os.path.join(args.data_path, "valid.h5"), "w") as h5f:
         valid_size = 0
         for file in tqdm.tqdm(files):
